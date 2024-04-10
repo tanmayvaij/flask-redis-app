@@ -4,12 +4,5 @@ services:
     image: tanmayvaij224/mystackapp:1.0
     deploy:
       replicas: 5
-      restart_policy: 
-        condition: on-failure
     ports: 
       - "4000:80"
-    networks:
-      - webnet
-networks:
-  webnet:
-  
