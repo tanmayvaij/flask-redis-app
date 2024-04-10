@@ -15,5 +15,5 @@ services:
     networks:
       - webnet
 networks:
-  webnet
+  webnet:
   
