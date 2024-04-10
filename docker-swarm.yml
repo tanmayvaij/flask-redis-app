@@ -1,8 +1,13 @@
-version: "3"
+version: '3'
+
 services:
-  web: 
-    image: tanmayvaij224/mystackapp:1.0
+  web:
+    image: myflaskapp:latest
+    ports:
+      - "5000:5000"
     deploy:
-      replicas: 5
-    ports: 
-      - "4000:80"
+      replicas: 3
+      restart_policy:
+        condition: on-failure
+  redis:
+    image: "redis:alpine"
